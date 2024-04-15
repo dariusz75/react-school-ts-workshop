@@ -1,11 +1,12 @@
 import './App.css';
 
-import { Text } from './ui';
+import { Text, Button } from './ui';
 
 function App() {
 	return (
 		<>
 			<Text>Some text...</Text>
+			<Button label='Click me' onClick={() => alert('test')} />
 		</>
 	);
 }
