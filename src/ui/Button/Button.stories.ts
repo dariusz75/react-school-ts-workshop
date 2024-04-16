@@ -14,12 +14,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
 	args: {
-		label: 'click 1',
+		label: 'Button',
 	},
 };
 
 export const Secondary: Story = {
 	args: {
-		label: 'click 2',
+		label: 'Button',
+		className: 'bg-white text-blue-600 border-blue-600',
+	},
+};
+
+export const Disabled: Story = {
+	args: {
+		label: 'Button',
+		disabled: true,
 	},
 };
