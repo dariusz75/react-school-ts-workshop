@@ -1,6 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	/* --color-primary sky-900 */
+	--color-primary: #0c4a6e;
+	/* --color-secondary sky-600 */
+	--color-secondary: #0284c7;
+	/* --color-white white */
+	--color-white: #fff;
+}
+
 /* 
 :root {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

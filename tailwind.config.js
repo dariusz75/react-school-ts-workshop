@@ -10,7 +10,8 @@ export default {
 				sans: ['Inter var', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
-				'wa-blue': '#184689',
+				primary: 'var(--color-primary)',
+				secondary: 'var(--color-secondary)',
 			},
 		},
 	},

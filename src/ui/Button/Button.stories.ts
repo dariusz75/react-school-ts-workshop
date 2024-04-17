@@ -21,7 +21,14 @@ export const Primary: Story = {
 export const Secondary: Story = {
 	args: {
 		label: 'Button',
-		className: 'bg-white text-blue-600 border-blue-600',
+		secondary: true,
+	},
+};
+
+export const Working: Story = {
+	args: {
+		label: 'Button',
+		working: true,
 	},
 };
 
@@ -29,5 +36,13 @@ export const Disabled: Story = {
 	args: {
 		label: 'Button',
 		disabled: true,
+	},
+};
+
+export const CustomStyling: Story = {
+	args: {
+		label: 'Button',
+		className:
+			'bg-red-600 text-white border-red-600 hover:bg-white hover:text-red-600 hover:border-red-600',
 	},
 };

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes stripeBackgroundPosition {
+	0% {
+		background-position: 200% 0;
+	}
+
+	100% {
+		background-position: 0 0;
+	}
+}
+
+button.working,
+button.working:hover {
+	cursor: wait;
+	color: var(--color-white);
+	background: repeating-linear-gradient(
+		45deg,
+		var(--color-primary) 25%,
+		var(--color-primary) 50%,
+		var(--color-secondary) 50%,
+		var(--color-secondary) 75%
+	);
+	background-size: 30px 30px;
+	animation: stripeBackgroundPosition 2s linear infinite;
+}
