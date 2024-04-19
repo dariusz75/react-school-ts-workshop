@@ -25,6 +25,13 @@ export const Secondary: Story = {
 	},
 };
 
+export const Small: Story = {
+	args: {
+		label: 'Button',
+		size: 'small',
+	},
+};
+
 export const Working: Story = {
 	args: {
 		label: 'Button',
