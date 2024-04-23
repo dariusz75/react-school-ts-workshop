@@ -5,7 +5,6 @@ import { Button } from './Button';
 const meta = {
 	title: 'UI/Button',
 	component: Button,
-	tags: ['autodocs'],
 	args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
 
