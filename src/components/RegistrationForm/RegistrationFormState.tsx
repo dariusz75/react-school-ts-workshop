@@ -1,4 +1,4 @@
-import { type ChangeEventHandler, useState } from 'react';
+import { type ChangeEventHandler, useState, FormEventHandler } from 'react';
 import { Button } from '../../ui';
 
 type RegistrationFormData = {
@@ -7,12 +7,14 @@ type RegistrationFormData = {
 	language: string;
 };
 
+const defaultState = {
+	email: '',
+	password: '',
+	language: '',
+};
+
 export const RegistrationFormState = () => {
-	const [formData, setFormData] = useState<RegistrationFormData>({
-		email: '',
-		password: '',
-		language: '',
-	});
+	const [formData, setFormData] = useState<RegistrationFormData>(defaultState);
 
 	const { email, password, language } = formData;
 
@@ -26,8 +28,15 @@ export const RegistrationFormState = () => {
 		});
 	};
 
+	const handleSubmit: FormEventHandler = (e) => {
+		e.preventDefault();
+		console.log(formData);
+		setFormData(defaultState);
+		console.log(formData);
+	};
+
 	return (
-		<form>
+		<form onSubmit={handleSubmit}>
 			<p>Email: {email}</p>
 			<p>Password: {password}</p>
 			<p>Language: {language}</p>
@@ -39,6 +48,7 @@ export const RegistrationFormState = () => {
 					className='border'
 					id='email'
 					type='email'
+					value={email}
 					onChange={handleChange}
 				/>
 			</div>
@@ -50,6 +60,7 @@ export const RegistrationFormState = () => {
 					className='border'
 					id='password'
 					type='password'
+					value={password}
 					onChange={handleChange}
 				/>
 			</div>
@@ -61,6 +72,7 @@ export const RegistrationFormState = () => {
 					className='border'
 					id='language'
 					type='text'
+					value={language}
 					onChange={handleChange}
 				/>
 			</div>
