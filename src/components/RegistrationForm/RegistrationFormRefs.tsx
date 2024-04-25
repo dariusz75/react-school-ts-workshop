@@ -1,5 +1,5 @@
-import { type FormEventHandler, useState, useRef } from 'react';
-import { Button } from '../../ui';
+import { type FormEventHandler, useRef, useEffect } from 'react';
+import { Button, Input } from '../../ui';
 
 type RegistrationFormData = {
 	email: string;
@@ -22,36 +22,17 @@ export const RegistrationFormRefs = () => {
 		console.log(data);
 	};
 
+	useEffect(() => {
+		if (emailFieldRef.current) {
+			emailFieldRef.current.focus();
+		}
+	});
+
 	return (
 		<form onSubmit={handleSubmit}>
-			<div className='my-2'>
-				<label className='mr-2' htmlFor='email'>
-					E-mail
-				</label>
-				<input className='border' id='email' type='email' ref={emailFieldRef} />
-			</div>
-			<div className='my-2'>
-				<label className='mr-2' htmlFor='password'>
-					Password
-				</label>
-				<input
-					className='border'
-					id='password'
-					type='password'
-					ref={passwordFieldRef}
-				/>
-			</div>
-			<div className='my-2'>
-				<label className='mr-2' htmlFor='language'>
-					Language
-				</label>
-				<input
-					className='border'
-					id='language'
-					type='text'
-					ref={languageFieldRef}
-				/>
-			</div>
+			<Input label='Email' type='email' ref={emailFieldRef} />
+			<Input label='Password' type='password' ref={passwordFieldRef} />
+			<Input label='Language' type='text' ref={languageFieldRef} />
 			<Button label='SEND' type='submit' />
 		</form>
 	);
