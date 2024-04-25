@@ -1,2 +1,3 @@
 export { IdGenerator } from './IdGenerator/IdGenerator';
-export { RegistrationForm } from './RegistrationForm/RegistrationForm';
+export { RegistrationFormState } from './RegistrationForm/RegistrationFormState';
+export { RegistrationFormRefs } from './RegistrationForm/RegistrationFormRefs';
