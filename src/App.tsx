@@ -5,15 +5,20 @@ import {
 	IdGenerator,
 	RegistrationFormState,
 	RegistrationFormRefs,
+	RegistrationFormRefsCustomInput,
 } from './components';
 
 function App() {
 	return (
 		<>
-			{/* <IdGenerator />
+			{/*
 			<Text>Some text...</Text>
-			<Button label='Click me' onClick={() => alert('test')} /> 
-			<RegistrationFormState /> */}
+			<Button label='Click me' onClick={() => alert('test')} />
+			<IdGenerator />
+			<RegistrationFormState />
+			<RegistrationFormRefs />
+			<RegistrationFormRefsCustomInput />
+			*/}
 			<RegistrationFormRefs />
 		</>
 	);

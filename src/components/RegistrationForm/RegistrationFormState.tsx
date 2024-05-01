@@ -22,6 +22,9 @@ export const RegistrationFormState = () => {
 		const id = e.target.id;
 		const value = e.target.value;
 
+		console.log('id is: ', id);
+		console.log('value is: ', value);
+
 		setFormData({
 			...formData,
 			[id]: value,
