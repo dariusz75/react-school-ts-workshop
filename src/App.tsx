@@ -6,7 +6,11 @@ import {
 	RegistrationFormState,
 	RegistrationFormRefs,
 	RegistrationFormRefsCustomInput,
+	RegistrationFormRefsHookForm,
+	RegistrationFormValidated,
 } from './components';
+
+import { TestForm } from './components/RegistrationForm/TestForm';
 
 function App() {
 	return (
@@ -18,8 +22,11 @@ function App() {
 			<RegistrationFormState />
 			<RegistrationFormRefs />
 			<RegistrationFormRefsCustomInput />
+			<RegistrationFormRefsHookForm />
+			<RegistrationFormValidated />
+			<TestForm />
 			*/}
-			<RegistrationFormRefs />
+			<TestForm />
 		</>
 	);
 }
