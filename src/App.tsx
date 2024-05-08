@@ -8,6 +8,7 @@ import {
 	RegistrationFormRefsCustomInput,
 	RegistrationFormRefsHookForm,
 	RegistrationFormValidated,
+	FormWizard,
 } from './components';
 
 import { TestForm } from './components/RegistrationForm/TestForm';
@@ -25,8 +26,9 @@ function App() {
 			<RegistrationFormRefsHookForm />
 			<RegistrationFormValidated />
 			<TestForm />
+			<FormWizard />
 			*/}
-			<TestForm />
+			<FormWizard />
 		</>
 	);
 }

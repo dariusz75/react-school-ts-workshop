@@ -4,3 +4,4 @@ export { RegistrationFormRefsCustomInput } from './RegistrationForm/Registration
 export { RegistrationFormRefs } from './RegistrationForm/RegistrationFormRefs';
 export { RegistrationFormRefsHookForm } from './RegistrationForm/RegistrationFormRefsHookForm';
 export { RegistrationFormValidated } from './RegistrationForm/RegistrationFormValidated';
+export { FormWizard } from './MultiStepForm/FormWizard';
