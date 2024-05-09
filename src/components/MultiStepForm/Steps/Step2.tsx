@@ -1,4 +1,15 @@
-export const Step2 = () => {
+import { type ChangeEvent } from 'react';
+
+type Props = {
+	dob: string;
+	hobby: string;
+};
+
+type Step2Props = Props & {
+	updateForm: ChangeEvent<HTMLInputElement>;
+};
+
+export const Step2 = ({ dob, hobby, updateForm }: Step2Props) => {
 	return (
 		<form className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 h-52 w-72'>
 			<div className='mb-4'>
@@ -10,8 +21,10 @@ export const Step2 = () => {
 				</label>
 				<input
 					className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-					id='firstName'
+					id='dob'
 					type='text'
+					value={dob}
+					onChange={(e) => updateForm(e)}
 				/>
 			</div>
 			<div className='mb-6'>
@@ -23,8 +36,10 @@ export const Step2 = () => {
 				</label>
 				<input
 					className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-					id='surname'
+					id='hobby'
 					type='text'
+					value={hobby}
+					onChange={(e) => updateForm(e)}
 				/>
 				<p className='text-red-500 text-xs italic'>error message</p>
 			</div>
